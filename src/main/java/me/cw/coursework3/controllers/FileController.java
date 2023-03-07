@@ -21,7 +21,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 
 public class FileController {
-    private SocksService socksService;
+    private final SocksService socksService;
     @GetMapping("/export")
     @Operation(summary = "Выгрузка json-файла носков")
     public ResponseEntity<InputStreamResource> downloadSocksJson () {
